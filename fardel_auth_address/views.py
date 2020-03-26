@@ -6,8 +6,8 @@ from flask import request
 from flask_jwt_extended import current_user, jwt_required
 
 from fardel.core.rest import create_api, abort, Resource
-from . import mod
-from .models import *
+from fardel_auth_address import mod
+from fardel_auth_address.models import *
 from fardel.ext import db, cache
 
 
