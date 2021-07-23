@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 
 install_requires = [
-    "fardel==1.3.0",
+    "fardel==1.3.1",
 ]
 
 setup(
     name='fardel_auth_address',
-    version='1.0.0',
+    version='1.0.1',
     description='Address extension for FardelCMS users',
     author='Sepehr Hamzehlouy',
     author_email='s.hamzelooy@gmail.com',
