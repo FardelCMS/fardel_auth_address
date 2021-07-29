@@ -27,13 +27,13 @@ class UserAddressApi(Resource):
     """
     endpoints = ['/address/', '/address/<addr_id>/']
 
-    @jwt_required
+    @jwt_required()
     def get(self, addr_id=None):
         """ To get all addresses """
         uas = UserAddress.query.filter_by(user_id=current_user.id).all()
         return {"addresses": [ua.dict() for ua in uas]}
 
-    @jwt_required
+    @jwt_required()
     def post(self, addr_id=None):
         """ To create an address """
         if addr_id:
@@ -57,14 +57,14 @@ class UserAddressApi(Resource):
         db.session.commit()
         return {"address": ua.dict()}
 
-    @jwt_required
+    @jwt_required()
     def patch(self, addr_id=None):
         """ To update an address. Is it required ? addr_id required """
         if not addr_id:
             abort(404)
         abort(404)
 
-    @jwt_required
+    @jwt_required()
     def delete(self, addr_id=None):
         """ To delete an address, addr_id required """
         if not addr_id:
